@@ -1,0 +1,79 @@
+/* body{
+    background-color: rgb(13, 13, 39);
+} */
+.container h1{
+color: aliceblue;
+}
+
+.card{
+  background-color: rgb(248, 241, 241);
+}
+  .logout  {
+    position:absolute;
+    top: 15px;
+    right:5px;
+/* float: right;
+margin-right: 10px;
+position: relative; */
+}
+.dash{
+
+  top: 90px;
+  right:40px;
+position: absolute;
+}
+.dash h2{
+  font-size: 20px;
+  font-weight: bold;
+}
+.image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 800px;
+    margin-top: 200px;
+  }
+  .image2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 800px;
+    margin-top: 100px;
+  }
+  .dashboard h1{
+color:white;
+  }
+
+  .file{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .file button{
+    margin-left:'2px' ;
+  }
+  
+  .file input::placeholder{
+    text-align: center;
+    font-size: 18px;
+  }
+  .uploaded h4{
+    text-align: center;
+    color:white;
+  }
+  .uploaded .inner-div{
+    display: inline-block;
+  }
+  .uploaded{
+    margin-left:5 0%;
+    }
+  .inner-div{
+    margin-left: 5%;
+    font-size: 20px;
+    color: grey;
+    }
+   .input::placeholder{
+text-align: center;
+   }
+  
