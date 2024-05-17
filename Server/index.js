@@ -7,7 +7,7 @@ app.use(express.json())
 const mongoose=require("mongoose")
 const multer  = require('multer')
 app.use("/files",express.static("files"))
-app.use("/image",express.static("image"))
+
 //routes
 // routes login and register
 app.use("/auth",require("./routes/jwtAuth"));

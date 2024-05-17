@@ -14,7 +14,7 @@ const Dashboard = ({ setAuth }) => {
   //get files from the file folder
   const getFile = async () => {
     const result = await axios.get("http://localhost:5000/fileupload/get-files")
-    // console.log("datasss:",result.data.data.rows);
+    console.log("datasss:",result.data.data.rows);
     setAllImage(result.data.data.rows)
     console.log("allimage:", allImage)
   }
