@@ -15,6 +15,7 @@ import FileUpload from './components/FileUpload';
 import Admin from './components/Admin';
 import Add from './pages/Add/Add';
 import List from './pages/List/List';
+import Notes from './components/Notes/Notes';
 
 export const RoleContext=createContext();
 function App() {
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
     },
     {
       path: "/login",
-      element: !isAuthenticated ? <Login setAuth={setAuth} /> :  !role?<Navigate to="/admin" />: <Navigate to ="/dashboard"/>
+      element: !isAuthenticated ? <Login setAuth={setAuth} /> :  !role?<Navigate to="/admin" />: <Navigate to ="/notes"/>
     },
     { 
       path:"/register",
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
     {
       path:"/dashboard",
       element:isAuthenticated ? <Dashboard setAuth={setAuth} /> :<Navigate to="/login" />
+    },
+    {
+      path:"/notes",
+      element:isAuthenticated ? <Notes setAuth={setAuth}/> :<Navigate to="/login" />
     },
     {
       path:"/fileupload",

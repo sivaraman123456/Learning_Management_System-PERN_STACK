@@ -15,7 +15,7 @@ const List = () => {
     
   }
 
-  const removeFood = async (dataId) => {
+  const removedata = async (dataId) => {
     const send = await axios.delete(`${url}/fileupload/delete-file/${dataId}`)
     await fetchList();
     if (send.data.status === "ok") {
@@ -33,36 +33,31 @@ const List = () => {
 
   return (
     <div className='list add flex-col'>
-        <p>All Foods List</p>
+        <p>All Data List</p>
         <div className='list-table'>
-          <div className="list-table-format ">
-            <table style={{border:"1px"}}>
-              <thead>
-                <tr>
-            <th>Image</th>
-            <th>Pdf</th>
-            <th>Semester</th>
-            <th>Subject</th>
-            <th>Unit</th>
-            <th>Delete</th>
-            </tr>
-            </thead>
-
-            </table>
+          <div className="list-table-format title ">
+            
+            <b>Image</b>
+            <b>Pdf</b>
+            <b>Semester</b>
+            <b>Subject</b>
+            <b>Unit</b>
+            <b>Delete</b>
+           
           </div>
           {list.map((item,index)=>{
             return (
-              <table>
+           
               <div key={index} className='list-table-format'>
                 <img src={`${url}/files/`+item.image} alt="" />
                 <p>{item.pdf}</p>
                 <p>{item.sem}</p>
                <p>{item.category}</p>
                 <p>{item.unit}</p>
-                <p  onClick={()=>removeFood(item.file_id)}>x</p>
+                <p className='cursor' onClick={()=>removedata(item.file_id)}>x</p>
                 {console.log("file_id:",item.file_id)}
               </div>
-              </table>
+             
             )
           })}
         </div>

@@ -85,13 +85,15 @@ return (
                         <select name='category' onChange={onChangeHandler} >
                             <option value="DSA">DSA</option>
                             <option value="JAVA">JAVA</option>
+                            <option value="OOPs">OOPs</option>
                             <option value="DBMS">DBMS</option>
                             <option value="CN">COMPUTER NETWORK</option>
                             <option value="OS">OS</option>
                             <option value="PYTHON">PYTHON</option>
-                            <option value="TESTING">TESTING</option>
+                            <option value="ST">ST</option>
                             <option value="SE">SE</option>
                             <option value="IWT">IWT</option>
+                            <option value="MCS">MCS</option>
                         </select>
                     </div>
                 

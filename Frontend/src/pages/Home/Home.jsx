@@ -1,11 +1,9 @@
  import './Home.css';
 import React from 'react'
 import { useState} from 'react'
-
-// background random images
-import backgroundImg1 from "../../assets/random/coding bg10.jpg"
-// import backgroundImg2 from '../assets/random/coding bg2.jpg'
-// import backgroundImg3 from '../assets/random/coding bg3.jpg'
+import backgroundImg1 from "../../assets/random/coding_bg2.jpg"
+import backgroundImg2 from '../../assets/random/coding_bg3.jpg'
+import backgroundImg3 from '../../assets/random/coding_bg4.jpg'
 // import backgroundImg4 from '../assets/random/coding bg4.jpg'
 // import backgroundImg5 from '../assets/random/coding bg5.jpg'
 // import backgroundImg6 from '../assets/random/coding bg6.jpeg'
@@ -17,83 +15,46 @@ import backgroundImg1 from "../../assets/random/coding bg10.jpg"
 
 const randomImges = [
     backgroundImg1
-    // backgroundImg2,
-    // backgroundImg3,
-    // backgroundImg4,
-    // backgroundImg5,
-    // backgroundImg6,
-    // backgroundImg7,
-    // backgroundImg8,
-    // backgroundImg9,
-    // backgroundImg10,
-    // backgroundImg111,
-];
-
+]
 const Home = () => {
  
     const [backgroundImg, setBackgroundImg] = useState(0);
-// useEffect(() => {
-//   const value1=Math.floor(Math.random() * randomImges.length)
-//   console.log(randomImges.length);
-  
-//         setBackgroundImg(value1);
-//     })
+
 
   return (
-    // <img src={backgroundImg} style={{
-    //     maxWidth: '100%',
-    //     maxHeight: '93vh',
-    //     objectFit: 'cover'
-    // }} alt="" />
-   <div className="Home"   style={{
-    backgroundImage:`url(${randomImges[backgroundImg]})`,
-            backgroundSize: "100% 100%",
-                    backgroundPosition: "center",
-                    height: "89.7vh",
-                    width: "100%",
-                    backgroundRepeat:'no-repeat'
-   }}>
-  
-   </div>
+  <>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <img src={backgroundImg1} className="d-block w-100" alt="..."/>
+    </div>
+    <div class="carousel-item">
+    <img src={backgroundImg2}className="d-block w-100" alt="..."/>
+    </div>
+    <div class="carousel-item">
+    <img src={backgroundImg3} className="d-block w-100" alt="..."/>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+   <div className='header'>
+            <div className='header-contents'>
+                <h2>Order your favourite food here</h2>
+                <p>Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time.</p>
+                <button>View Menu</button>
+            </div>
+        </div>
+        </>
   )
 }
 
 export default Home
 
-
-// import React from 'react';
-// import backgroundImg1 from '../assets/random/coding bg2.jpg';
-
-// import React, { Component } from "react";
- 
-// class App extends Component {
-//     render() {
-//         const myStyle = {
-//             backgroundImage:
-//                 "url('https://media.geeksforgeeks.org/wp-content/uploads/rk.png')",
-//             height: "100vh",
-//             marginTop: "-70px",
-//             fontSize: "50px",
-//             backgroundSize: "cover",
-//             backgroundRepeat: "no-repeat",
-//         };
-
-// const Home = () => {
-//   return (
-//     <div  
-//     style={{
-//         backgroundImage:`url(${backgroundImg1})`,
-//         backgroundSize: "cover",
-//                 backgroundPosition: "center",
-//                 height: "100vh",
-//                 width: "100%",
-//                 backgroundRepeat:'no-repeat'
-//     }}
-//     >
-//       <img src={backgroundImg1} alt="Background" />
-//     </div>
-//   );
-// };
-
-// export default Home;
 

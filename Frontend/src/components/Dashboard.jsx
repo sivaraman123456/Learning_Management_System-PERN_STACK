@@ -60,30 +60,50 @@ const Dashboard = ({ setAuth }) => {
         </div>
 
         <div className="uploaded">
-          <h4>Uploaded PDF:</h4>
+       
           <br />
 
-          {allImage === null ? "" : allImage.map((data) => {
-            return <div className="inner-div">
-              <h6 style={{ color: "blue" }}> </h6>
-
-              {console.log("id:", data)}
-              <div className="card" style={{ width: "18rem" }}>
-                <div className="card-body ">
-                  <h5 className="card-title">MCA NOTES</h5>
-                  <h6 className="card-subtitle mb-2 text-muted">Unit:{data.unit}</h6>
-                  <p className="card-subtitle mb-2 text-mutedt ">Subject:{data.subject}</p>
-                  <p className="card-text">Semester:{data.sem}</p>
+          {allImage === null ? "" : allImage.map((data,index) => {
+           return (
+            <div className="inner-div">
+           <div key={index} className="card" style={{width: "18rem"}}>
+            {console.log(data.image)}
+            <img src={`http://localhost:5000/files/`+data.image} className="card-img-top" alt=""/>
+            <div className="card-body">
+              <h5 className="card-title">Subject:{data.subject}</h5>
+              
+              <h6 className="card-subtitle mb-2 text-muted">Semester:{data.sem}</h6>
+                 
+                  <p className="card-text">Unit:{data.unit}</p>
                   {console.log("file_id", data.pdf)}
                   <FaRegEye onClick={() => showPdf(data.pdf)} style={{ marginLeft: "20px" }} />
-                </div>
-                <ToastContainer />
-              </div>
+              {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
             </div>
-          })}
+            </div>
+            </div>
+          )})}
+         
         </div>
+         <ToastContainer />
       </div>
     </Fragment>
   )
 }
 export default Dashboard
+
+ // return <div  className="inner-div">
+            //   <h6 style={{ color: "blue" }}> </h6>
+
+            //   {console.log("id:", data)}
+            //   <div className="card" style={{ width: "18rem" }}>
+            //     <div className="card-body ">
+            //       <h5 className="card-title">MCA NOTES</h5>
+                  // <h6 className="card-subtitle mb-2 text-muted">Unit:{data.unit}</h6>
+                  // <p className="card-subtitle mb-2 text-mutedt ">Subject:{data.subject}</p>
+                  // <p className="card-text">Semester:{data.sem}</p>
+                  // {console.log("file_id", data.pdf)}
+                  // <FaRegEye onClick={() => showPdf(data.pdf)} style={{ marginLeft: "20px" }} />
+            //     </div>
+                // <ToastContainer />
+            //   </div>
+            // </div>
